@@ -56,10 +56,12 @@ export class KeypadComponent implements OnInit {
     } else if (it === 'intro'){
       this.charanType = 'प्रस्तावपद';
       this.anuvadan = false;
-    }
-     else if(it === 'bridge') {
+    } else if(it === 'bridge') {
       this.charanType = 'सेतुपद';
       this.anuvadan = false;
+    } else if(it === 'repeat'){
+      this.charanType = 'अनुवादनसहित';
+      this.anuvadan = true;
     } else if (it === '1' || it === '2' || it === '3' || it === '4') {
       console.log("In swarank ");
       this.swarank = it;
@@ -115,5 +117,6 @@ export class KeypadComponent implements OnInit {
   }
 
   correct() {
+    // this.swarmatra = '';
   }
 }
