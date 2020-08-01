@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { KeypadComponent } from './keypad/keypad.component';
 import { InformationComponent } from './information/information.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InformationComponent } from './information/information.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

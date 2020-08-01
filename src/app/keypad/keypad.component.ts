@@ -1,11 +1,41 @@
 import { Component, OnInit } from '@angular/core';
+export interface Rachana {
+  one: string;
+  two: string;
+  three: string;
+  four: string;
+  five: string;
+  six: string;
+  seven: string;
+  eight: string;
+  nine: string;
+  ten: string;
+  eleven: string;
+  twelve: string;
+  thirteen: string;
+}
 
+const ELEMENT_DATA: Rachana[] = [
+  { one: '॥ॐ॥', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
+  { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
+  { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
+  { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
+  { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
+  { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
+  { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
+  { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
+  { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
+  { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' }
+  ];
 @Component({
   selector: 'app-keypad',
   templateUrl: './keypad.component.html',
   styleUrls: ['./keypad.component.css']
 })
 export class KeypadComponent implements OnInit {
+
+  displayedColumns: string[] = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen'];
+  dataSource = ELEMENT_DATA;
 
   constructor() { }
 
@@ -26,6 +56,8 @@ export class KeypadComponent implements OnInit {
   public matrankFix = '१६';
   public anuvadan = true;
   public charanType = 'अनुवादनसहित';
+  public i = 0;
+  public j = 1;
 
   //Write logic to dynamically capture the matra count and show metadata selections;
   captureMeta(it) {
@@ -41,82 +73,70 @@ export class KeypadComponent implements OnInit {
       this.ifKerva = true;
       // this.swarank = 3;
       //logic to disable Khemta numbers
-    } else if (it === '8' || it === '16' || it === '32') {
-      if (this.matrank > it)//matrank is decreasing so reverse counting; eg. this.matrank = 12 and it = 8 then reduce matrank to 8;
-        this.matrank -= it;
-      if (it === '8')
-        this.matrankFix = '८';
-      if (it === '16')
-        this.matrankFix = '१६';
-      if (it === '32')
-        this.matrankFix = '३२';
-      console.log(this.matrank + " matrank");
-      // } else if (it === 'repeat') {
-      //   this.anuvadan = true;
-    } else if (it === 'intro'){
-      this.charanType = 'प्रस्तावपद';
-      this.anuvadan = false;
-    } else if(it === 'bridge') {
-      this.charanType = 'सेतुपद';
-      this.anuvadan = false;
-    } else if(it === 'repeat'){
-      this.charanType = 'अनुवादनसहित';
-      this.anuvadan = true;
-    } else if (it === '1' || it === '2' || it === '3' || it === '4') {
-      console.log("In swarank ");
-      this.swarank = it;
-      if (it === '1')
-        this.swarankFix = '१';
-      if (it === '2')
-        this.swarankFix = '२';
-      if (it === '3')
-        this.swarankFix = '३';
-      if (it === '4')
-        this.swarankFix = '४';
-      this.swarmatra = '';
-    } else {
-      console.log('in else ');
     }
   }
+
+  renderMatra(it) {
+
+    switch (this.j) {
+      case (0):
+        this.dataSource[this.i].one = it;
+        break;
+      case (1):
+        this.dataSource[this.i].two = it;
+        break;
+      case (2):
+        this.dataSource[this.i].three = it;
+        break;
+      case (3):
+        this.dataSource[this.i].four = it;
+        break;
+      case (4):
+        this.dataSource[this.i].five = it;
+        break;
+      case (5):
+        this.dataSource[this.i].six = it;
+        break;
+      case (6):
+        this.dataSource[this.i].seven = it;
+        break;
+      case (7):
+        this.dataSource[this.i].eight = it;
+        break;
+      case (8):
+        this.dataSource[this.i].nine = it;
+        break;
+      case (9):
+        this.dataSource[this.i].ten = it;
+        break;
+      case (10):
+        this.dataSource[this.i].eleven = it;
+        break;
+      case (11):
+        this.dataSource[this.i].twelve = it;
+        break;
+      case (12):
+        this.dataSource[this.i].thirteen = it;
+        this.i++;
+        this.j = -1;
+        break;
+    }
+    this.j++;
+  }
+
   captureIt(it) {
-    if (this.swarank > 0) {
-      this.swarmatra += it;
-      this.swarank--;
-      console.log("swarmatra: " + this.swarmatra + " swarank: " + this.swarank + " matrank: " + this.matrank);
-    } else {
-      this.matrank--;
-      this.line.push(this.swarmatra);
+    if (it === '॥' || it === ':॥' || it === '।') {
+      this.renderMatra(it);
+    } else if (it === ';') {
+      this.renderMatra(this.swarmatra);
       this.swarmatra = '';
+    }
+    else {
       this.swarmatra += it;
-      if (this.line.length === 3 || this.line.length === 6 || this.line.length === 9 || this.line.length === 12) {
-        if (this.matrank === 0) {
-          if (this.anuvadan) {
-            this.line.push(':॥');
-          } else {
-            this.line.push('॥');
-            this.anuvadan = true;
-          }
-          this.finalRachana.push(this.line);
-          this.line = ['॥'];
-          this.matrank = 16;
-        } else {
-          this.line.push('।');
-          if (this.line.length > 12) {
-            this.finalRachana.push(this.line);
-            this.line = ['।'];
-          }
-        }
-      }
-      this.swarank = 1;
-      this.swarankFix = '२';
-      if (this.taal === 'खेमटा-३६०') {
-        this.swarank = 2;
-        this.swarankFix = '३';
-      }
     }
   }
 
   correct() {
-    // this.swarmatra = '';
+    this.swarmatra = this.swarmatra.slice(0, -1);
   }
 }
