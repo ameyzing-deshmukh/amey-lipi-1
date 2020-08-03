@@ -1,7 +1,34 @@
 table {
     width: 100%;
   }
-  .mat-cell {
+  .rachanaContainer{
+    height: 200px;
+  overflow: auto;
+
+  }
+  #nameOfRachanaTd, table mat-cell {
     text-align: center;
     justify-content:center;
   }
+  #nameOfInstTd, #avarohTd{
+    text-align: left;
+    justify-content:left;
+  }
+  #aarohTd, #nameOfTaalTd{
+    text-align: right;
+    justify-content:right;
+  }
+  mat-header-row{
+    display: none;
+  }
+.rachanaDetailsP1{
+  font-family: KrutiDev;
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
+.rachanaDetailsP2{
+  font-family: KrutiDev;
+  font-size: small;
+  font-weight: bold;
+}

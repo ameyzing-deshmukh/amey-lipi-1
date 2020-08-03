@@ -1,81 +1,116 @@
 <div class='container-fluid'>
     <div class="row py-3">
         <div class="col-lg-6 border-right">
-                <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <div>
+                <div class="row" style="height: 25px;">
+                    <div class="col-lg-3">
+                        <p class="rachanaDetailsP2" style="text-align: left;">वंशी</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="rachanaDetailsP1">भूप</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <p class="rachanaDetailsP2" style="text-align: right;">केरवा-१२०</p>
+                    </div>
+
+                    <!--<table>
+                    <tr>
+                        <td colspan="3" id="nameOfInstTd"><p class="rachanaDetailsP2">वंशी</p></td>
+                        <td colspan="8" id="nameOfRachanaTd"><p class="rachanaDetailsP1">भूप</p></td>
+                        <td colspan="2" id="nameOfTaalTd"><p class="rachanaDetailsP2">केरवा-१२०</p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" id="aarohTd"><small>आरोहण - स री ग प ध सं</small></td>
+                        <td></td>
+                        <td colspan="6" id="avarohTd"><small>अवरोहण - सं ध प ग री स</small></td>
+                    </tr>
+                </table>-->
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="text-align: right;">
+                        <small>आरोहण - स री ग प ध सं</small>
+                    </div>
+                    <div class="col-lg-6" style="text-align: left;">
+                        <small>अवरोहण - सं ध प ग री स</small>
+                    </div>
+                </div>
+            </div>
+            <div class="rachanaContainer mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource">
                     <ng-container matColumnDef="one">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.one}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.one}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="two">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.two}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.two}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="three">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.three}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.three}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="four">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.four}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.four}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="five">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.five}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.five}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="six">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.six}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.six}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="seven">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.seven}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.seven}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="eight">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.eight}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.eight}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="nine">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.nine}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.nine}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="ten">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.ten}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.ten}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="eleven">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.eleven}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"> <small>{{element.eleven}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="twelve">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.twelve}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"> <small>{{element.twelve}}</small></mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="thirteen">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.thirteen}} </mat-cell>
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let element"><small>{{element.thirteen}}</small></mat-cell>
                     </ng-container>
-                    
-
-                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-                </mat-table>
+                </table>
+            </div>
         </div>
         <div class="col-lg-6">
             <div class="row">
                 <div class="col-lg-2 border-right">
                     <span class="text-dark">{{swarmatra}}</span>
+                    <span class="text-danger">{{errMessage}}</span>
                 </div>
                 <div class="col-lg-10 border-right">
                     <div>
                         <button class="btn btn-success" (click)="captureMeta('kerva')">केरवा-१२०</button>
                         <button class="btn btn-success" (click)="captureMeta('khemta')">खेमटा-३६०</button>
-                        <span class='px-3'>ताल</span><span class="px-3 border border-info">{{taal}}</span><br /><br />
-                    </div>
-                    <div>
+                        <!-- <span class='px-3'>ताल</span><span class="px-3 border border-info">{{taal}}</span><br /><br /> -->
                         <button class="btn btn-success rounded-circle" (click)="captureIt('॥ॐ॥')">॥ॐ॥</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('॥')">॥</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt(':॥')">:॥</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('।')">।</button><br /><br />
+                    </div>
+                    <div>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('म़॑')">म़॑</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('प़')">प़</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('ध़॒')">ध़॒</button>
@@ -95,7 +130,7 @@
                         <button class="btn btn-success rounded-circle" (click)="captureIt('नि॒')">नि॒</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('नि')">नि</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('सं')">सं</button>
-                        <button class="btn btn-success rounded-circle" (click)="captureIt('रीं')">रीं॒</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('रीं॒')">रीं॒</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('रीं')">रीं</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('गं॒')">गं॒</button>
                         <button class="btn btn-success rounded-circle" (click)="captureIt('गं')">गं</button>

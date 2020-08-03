@@ -26,7 +26,7 @@ const ELEMENT_DATA: Rachana[] = [
   { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
   { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' },
   { one: '', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '' }
-  ];
+];
 @Component({
   selector: 'app-keypad',
   templateUrl: './keypad.component.html',
@@ -47,7 +47,7 @@ export class KeypadComponent implements OnInit {
   public line = [];//this is one line with 13 parts
   public finalRachana = [];//this is final rachana
   public swarmatra = '';//this is swaras in one matra
-  public swarank = 2;//number of swaras in one matra; default is two;
+  public swarank = 0;//number of swaras in one matra; default is two;
   public swarankFix = '२';
   public taal = 'केरवा-१२०';//either kerva or khemta
   public ifKerva = true;
@@ -58,6 +58,7 @@ export class KeypadComponent implements OnInit {
   public charanType = 'अनुवादनसहित';
   public i = 0;
   public j = 1;
+  public errMessage = '';
 
   //Write logic to dynamically capture the matra count and show metadata selections;
   captureMeta(it) {
@@ -80,7 +81,14 @@ export class KeypadComponent implements OnInit {
 
     switch (this.j) {
       case (0):
-        this.dataSource[this.i].one = it;
+        if (it === '॥' || it === '।') {
+          this.dataSource[this.i].one = it;
+          this.j = -1;
+        } else {
+          this.swarmatra = '';
+          this.errMessage = 'कृपया जाँचे!';
+          this.j = 0;
+        }
         break;
       case (1):
         this.dataSource[this.i].two = it;
@@ -89,8 +97,7 @@ export class KeypadComponent implements OnInit {
         this.dataSource[this.i].three = it;
         break;
       case (3):
-        this.dataSource[this.i].four = it;
-        break;
+        this.j = 4;
       case (4):
         this.dataSource[this.i].five = it;
         break;
@@ -98,8 +105,7 @@ export class KeypadComponent implements OnInit {
         this.dataSource[this.i].six = it;
         break;
       case (6):
-        this.dataSource[this.i].seven = it;
-        break;
+        this.j = 7;
       case (7):
         this.dataSource[this.i].eight = it;
         break;
@@ -107,8 +113,7 @@ export class KeypadComponent implements OnInit {
         this.dataSource[this.i].nine = it;
         break;
       case (9):
-        this.dataSource[this.i].ten = it;
-        break;
+        this.j = 10
       case (10):
         this.dataSource[this.i].eleven = it;
         break;
@@ -116,27 +121,41 @@ export class KeypadComponent implements OnInit {
         this.dataSource[this.i].twelve = it;
         break;
       case (12):
-        this.dataSource[this.i].thirteen = it;
-        this.i++;
-        this.j = -1;
-        break;
+        if (it === '॥' || it === ':॥' || it === '।') {
+          this.dataSource[this.i].thirteen = it;
+          this.i++;
+          this.j = -1;
+        } else {
+          this.swarmatra = '';
+          this.errMessage = 'कृपया जाँचे!';
+          this.j = 12;
+        }
+      // break;
     }
     this.j++;
   }
 
   captureIt(it) {
+    this.errMessage = '';
     if (it === '॥' || it === ':॥' || it === '।') {
       this.renderMatra(it);
     } else if (it === ';') {
       this.renderMatra(this.swarmatra);
       this.swarmatra = '';
-    }
-    else {
-      this.swarmatra += it;
+      this.swarank = 0;
+    } else {
+      if (this.swarank < 4) {
+        this.swarmatra += it;
+        this.swarank++;
+      }
     }
   }
 
   correct() {
-    this.swarmatra = this.swarmatra.slice(0, -1);
+    // console.log("Swarmatra: "+this.swarmatra+" Swarmatra char count: "+this.swarmatra.length+" Swarank: "+this.swarank+" Count to slice: "+(this.swarmatra.length/this.swarank));
+    // let countToSlice = -1 * (this.swarmatra.length/this.swarank);
+    // this.swarmatra = this.swarmatra.slice(0, countToSlice);
+    this.swarmatra = '';
+    this.swarank = 0;
   }
 }
