@@ -75,8 +75,7 @@
                     </ng-container>
                     <ng-container matColumnDef="thirteen" style="width:2.5%">
                         <mat-header-cell *matHeaderCellDef></mat-header-cell>
-                        <mat-cell *matCellDef="let element"><small>1</small></mat-cell>
-                        <!-- {{element.thirteen}} -->
+                        <mat-cell *matCellDef="let element"><small>{{element.thirteen}}</small></mat-cell>
                     </ng-container>
                     <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
@@ -90,13 +89,15 @@
     </div>
     <div>
         <div>
-            <button class="btn btn-success" (click)="captureMeta('kerva')">केरवा-१२०</button>
-            <button class="btn btn-success" (click)="captureMeta('khemta')">खेमटा-३६०</button>
+            <!-- <button class="btn btn-success" (click)="captureMeta('kerva')">केरवा-१२०</button>
+            <button class="btn btn-success" (click)="captureMeta('khemta')">खेमटा-३६०</button><br /><br /> -->
             <!-- <span class='px-3'>ताल</span><span class="px-3 border border-info">{{taal}}</span><br /><br /> -->
-            <button class="btn btn-success rounded-circle" (click)="captureIt('॥ॐ॥')">॥ॐ॥</button>
+            <!-- <button class="btn btn-success rounded-circle" (click)="captureIt('॥ॐ॥')">॥ॐ॥</button> -->
             <button class="btn btn-success rounded-circle" (click)="captureIt('॥')">॥</button>
             <button class="btn btn-success rounded-circle" (click)="captureIt(':॥')">:॥</button>
-            <button class="btn btn-success rounded-circle" (click)="captureIt('।')">।</button><br /><br />
+            <button class="btn btn-success rounded-circle" (click)="captureIt('।')">।</button>
+            <button class="btn btn-success rounded-circle" (click)="captureIt(';')">जोड़ें</button>
+            <button class="btn btn-success" (click)="correct()">सुधारे</button><br /><br />
         </div>
         <div>
             <button class="btn btn-success rounded-circle" (click)="captureIt('म़॑')">म़॑</button>
@@ -126,9 +127,7 @@
             <button class="btn btn-success rounded-circle" (click)="captureIt('मऺं')">मऺं</button>
             <button class="btn btn-success rounded-circle" (click)="captureIt('पं')">पं</button>
             <button class="btn btn-success rounded-circle" (click)="captureIt('-')">-</button>
-            <button class="btn btn-success rounded-circle" (click)="captureIt('ऽ')">ऽ</button><br /><br />
-            <button class="btn btn-success rounded-circle" (click)="captureIt(';')">|______|</button>
-            <button class="btn btn-success" (click)="correct()">सुधारे</button>
+            <button class="btn btn-success rounded-circle" (click)="captureIt('ऽ')">ऽ</button>
         </div>
     </div>
 </div>
