@@ -36,3 +36,7 @@ table {
   font-size: small;
   font-weight: bold;
 }
+.btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
+  background-color: #e87a43 !important;
+  border-style: none;
+}
