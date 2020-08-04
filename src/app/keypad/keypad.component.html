@@ -1,8 +1,8 @@
 <div class='container-fluid'>
-    <div class="row py-3">
-        <div class="col-lg-6 border-right">
+    <!-- <div class="row py-3">
+        <div class="col-lg-6 border-right"> -->
             <div>
-                <div class="row" style="height: 25px;">
+                <div class="row" style="height: 23px;">
                     <div class="col-lg-3">
                         <p class="rachanaDetailsP2" style="text-align: left;">वंशी</p>
                     </div>
@@ -12,19 +12,6 @@
                     <div class="col-lg-3">
                         <p class="rachanaDetailsP2" style="text-align: right;">केरवा-१२०</p>
                     </div>
-
-                    <!--<table>
-                    <tr>
-                        <td colspan="3" id="nameOfInstTd"><p class="rachanaDetailsP2">वंशी</p></td>
-                        <td colspan="8" id="nameOfRachanaTd"><p class="rachanaDetailsP1">भूप</p></td>
-                        <td colspan="2" id="nameOfTaalTd"><p class="rachanaDetailsP2">केरवा-१२०</p></td>
-                    </tr>
-                    <tr>
-                        <td colspan="6" id="aarohTd"><small>आरोहण - स री ग प ध सं</small></td>
-                        <td></td>
-                        <td colspan="6" id="avarohTd"><small>अवरोहण - सं ध प ग री स</small></td>
-                    </tr>
-                </table>-->
                 </div>
                 <div class="row">
                     <div class="col-lg-6" style="text-align: right;">
@@ -35,8 +22,9 @@
                     </div>
                 </div>
             </div>
+            
             <div class="rachanaContainer mat-elevation-z8">
-                <table mat-table [dataSource]="dataSource">
+                <table mat-table [dataSource]="dataSource" id="rachanaTableId">
                     <ng-container matColumnDef="one">
                         <mat-header-cell *matHeaderCellDef></mat-header-cell>
                         <mat-cell *matCellDef="let element"><small>{{element.one}}</small></mat-cell>
@@ -85,16 +73,17 @@
                         <mat-header-cell *matHeaderCellDef></mat-header-cell>
                         <mat-cell *matCellDef="let element"> <small>{{element.twelve}}</small></mat-cell>
                     </ng-container>
-                    <ng-container matColumnDef="thirteen">
+                    <ng-container matColumnDef="thirteen" style="width:2.5%">
                         <mat-header-cell *matHeaderCellDef></mat-header-cell>
-                        <mat-cell *matCellDef="let element"><small>{{element.thirteen}}</small></mat-cell>
+                        <mat-cell *matCellDef="let element"><small>1</small></mat-cell>
+                        <!-- {{element.thirteen}} -->
                     </ng-container>
                     <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
                 </table>
             </div>
-        </div>
-        <div class="col-lg-6">
+        <!-- </div> -->
+        <!-- <div class="col-lg-6"> -->
             <div class="row">
                 <div class="col-lg-2 border-right">
                     <span class="text-dark">{{swarmatra}}</span>
@@ -144,6 +133,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 </div>

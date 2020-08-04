@@ -1,26 +1,30 @@
 table {
-    width: 100%;
+  table-layout: fixed;
+  width: 100%;
   }
   .rachanaContainer{
     height: 200px;
   overflow: auto;
 
   }
-  #nameOfRachanaTd, table mat-cell {
+ table mat-cell {
     text-align: center;
     justify-content:center;
-  }
-  #nameOfInstTd, #avarohTd{
-    text-align: left;
-    justify-content:left;
-  }
-  #aarohTd, #nameOfTaalTd{
-    text-align: right;
-    justify-content:right;
   }
   mat-header-row{
     display: none;
   }
+  #rachanaTableId mat-row mat-cell:nth-child(1), mat-cell:nth-child(2), mat-cell:nth-child(3), mat-cell:nth-child(5),
+  mat-cell:nth-child(6), mat-cell:nth-child(8), mat-cell:nth-child(9),
+  mat-cell:nth-child(11), mat-cell:nth-child(12) {
+    background-color: beige;
+  }
+  #rachanaTableId mat-row mat-cell:nth-child(4), mat-cell:nth-child(7), mat-cell:nth-child(10),
+  mat-cell:nth-child(13){
+    white-space:nowrap;
+    width: 2.5%;
+    background-color: beige;
+}
 .rachanaDetailsP1{
   font-family: KrutiDev;
   font-size: larger;
