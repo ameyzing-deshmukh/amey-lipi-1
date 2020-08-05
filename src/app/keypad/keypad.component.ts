@@ -158,4 +158,12 @@ export class KeypadComponent implements OnInit {
     this.swarmatra = '';
     this.swarank = 0;
   }
+  clickCapture(it) {
+    console.log(it.target);
+    this.swarmatra = it.target.outerText;
+    console.log(it.target.cellIndex);
+    var rowIndex = it.target.parentElement.rowIndex;
+    var cellIndex = it.target.cellIndex;
+    console.log('Row = ' + rowIndex + ', Column = ' + cellIndex);
+  }
 }

@@ -46,3 +46,14 @@ table {
   background-color: #e87a43 !important;
   border-style: none;
 }
+input{
+  background-color: beige;
+  border:none;
+}
+input:focus{
+  border:none;
+}
+.mainButtons{
+  height:100%;
+  width:100%;
+}
