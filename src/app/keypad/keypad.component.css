@@ -38,6 +38,9 @@ table {
   text-align: center;
   height: 20px;
 }
+mat-cell{
+font-size:10px;
+}
 .rachanaDetailsP2{
   font-family: KrutiDev;
   font-size: small;
