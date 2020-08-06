@@ -21,14 +21,16 @@ table {
   }
   #rachanaTableId mat-row mat-cell:nth-child(4), mat-cell:nth-child(7), mat-cell:nth-child(10),
   mat-cell:nth-child(13){
-    white-space:nowrap;
-    width: 2.5%;
     background-color: beige;
+    flex: 0 0 5px;
 }
 
 #rachanaTableId mat-row mat-cell:nth-child(1){
   text-align: left;
   justify-content:left;
+  background-color: beige;
+  padding:2px;
+  flex: 0 0 35px;
   }
 
 .rachanaDetailsP1{
@@ -41,6 +43,7 @@ table {
 mat-cell{
 font-size:10px;
 }
+
 .rachanaDetailsP2{
   font-family: KrutiDev;
   font-size: small;
