@@ -68,3 +68,7 @@ input{
 input:focus{
   border:none;
 }
+.keyPadTableClass tr td{
+  text-align: center;
+  justify-content:center;
+}
