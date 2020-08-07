@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { KeypadComponent } from './keypad/keypad.component';
 import { InformationComponent } from './information/information.component';
 import { MatTableModule } from '@angular/material/table';
+import { RachanaComponent } from './rachana/rachana.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     KeypadComponent,
-    InformationComponent
+    InformationComponent,
+    RachanaComponent
   ],
   imports: [
     BrowserModule,

@@ -26,19 +26,19 @@ table {
 }
 
 #rachanaTableId mat-row mat-cell:nth-child(1){
-  text-align: left;
-  justify-content:left;
+  text-align: right;
+  justify-content:right;
   background-color: beige;
   padding:2px;
   flex: 0 0 40px;
   }
 
   #rachanaTableId mat-row mat-cell:nth-child(13){
-    text-align: center;
-    justify-content:center;
+    text-align: left;
+    justify-content:left;
     background-color: beige;
     padding:2px;
-    flex: 0 0 40px;
+    flex: 0 0 20px;
     }
 
 .rachanaDetailsP1{
@@ -67,8 +67,4 @@ input{
 }
 input:focus{
   border:none;
-}
-.mainButtons{
-  height:100%;
-  width:100%;
 }

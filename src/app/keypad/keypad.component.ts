@@ -15,6 +15,10 @@ export interface Rachana {
   thirteen: string;
 }
 
+//ToDO:
+//Give Rachana List and on selection change the charan display
+//Highlight the cell being changed
+
 const ELEMENT_DATA: Rachana[] = [
   { one: '॥ॐ॥', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: '।' },
   { one: '।', two: '', three: '', four: '।', five: '', six: '', seven: '।', eight: '', nine: '', ten: '।', eleven: '', twelve: '', thirteen: ':॥' },
@@ -81,13 +85,7 @@ export class KeypadComponent implements OnInit {
 
         switch (this.j) {
           case (0):
-            if (it === '॥' || it === '।') {
-              this.dataSource[this.i].one += it;
-              this.j = -1;
-            } else {
-              this.errMessage = 'कृपया जाँचे!';
-              this.j = 0;
-            }
+            this.j = 1;
             break;
           case (1):
             this.dataSource[this.i].two += it;
@@ -120,30 +118,19 @@ export class KeypadComponent implements OnInit {
             this.dataSource[this.i].twelve += it;
             break;
           case (12):
-            if (it === '॥' || it === ':॥' || it === '।') {
-              this.dataSource[this.i].thirteen += it;
-              this.i++;
-              this.j = 0;
-            } else {
-              this.errMessage = 'कृपया जाँचे!';
-              this.j = 12;
-            }
+            this.j = 1;
         }
         console.log("in if if: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
         this.swarank++;
         if (this.swarank === 4) {
-          if(this.j === 12){
+          if (this.j === 11) {
             this.i++;
-            this.j = -1;
+            this.j = 0;
           }
           this.j++;
           this.swarank = 0;
         }
-      } else {
-        console.log("in else: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
-        this.j++;
-        this.swarank = 0;
-      }
+      } 
     }
     console.log("after: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
   }
