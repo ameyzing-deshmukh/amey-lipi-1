@@ -30,7 +30,7 @@ table {
   justify-content:right;
   background-color: beige;
   padding:2px;
-  flex: 0 0 40px;
+  flex: 0 0 32px;
   }
 
   #rachanaTableId mat-row mat-cell:nth-child(13){
