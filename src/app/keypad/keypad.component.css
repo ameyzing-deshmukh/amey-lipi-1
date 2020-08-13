@@ -58,7 +58,7 @@ font-size:10px;
   font-weight: bold;
 }
 .btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
-  background-color: white;
+  background-color: white !important;
   color: black;
   font-size: large;
   font-family: KrutiDev;
