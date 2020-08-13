@@ -69,19 +69,19 @@ export class KeypadComponent implements OnInit {
   }
 
   captureIt(it) {
-    console.log("before: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
+    // console.log("before: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
 
-    if (it === ';') {
-      console.log("in if: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
+    if (it === '+') {
+      // console.log("in if: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
       this.j++;
-      if (this.j > 12) {
-        this.j = 1;
+      if (this.j === 12) {
         this.i++;
+        this.j = 1;
       }
       this.swarank = 0;
     } else {
       if (this.swarank < 4) {
-        console.log("in else if: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
+        // console.log("in else if: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
 
         switch (this.j) {
           case (0):
@@ -119,18 +119,19 @@ export class KeypadComponent implements OnInit {
             break;
           case (12):
             this.j = 1;
+            this.i++;
         }
-        console.log("in if if: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
+        // console.log("in if if: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
         this.swarank++;
         if (this.swarank === 4) {
-          if (this.j === 11) {
-            this.i++;
-            this.j = 0;
-          }
           this.j++;
+          if (this.j === 12) {
+            this.i++;
+            this.j = 1;
+          }
           this.swarank = 0;
         }
-      } 
+      }
     }
     console.log("after: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
   }
