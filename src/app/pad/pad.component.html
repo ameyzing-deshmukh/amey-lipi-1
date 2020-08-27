@@ -1,4 +1,4 @@
-<div class="rachanaContainer mat-elevation-z8">
+<div id="divToSave" class="rachanaContainer mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" id="rachanaTableId">
         <ng-container matColumnDef="one">
             <mat-header-cell *matHeaderCellDef></mat-header-cell>
@@ -57,3 +57,4 @@
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </table>
 </div>
+<button class="btn btn-secondary btn-block" (click)="saveIt()">Save</button>

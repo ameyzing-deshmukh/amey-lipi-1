@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
+import html2canvas from 'html2canvas';
+
 export interface Rachana {
   one: string;
   two: string;
@@ -147,4 +149,26 @@ export class PadComponent implements OnInit {
     var cellIndex = it.target.cellIndex;
     console.log('Row = ' + rowIndex + ', Column = ' + cellIndex);
   }
+
+  public saveIt(){
+    console.log("Hello");
+    html2canvas(document.querySelector("#divToSave")).then(canvas => {
+      // document.body.appendChild(canvas);
+      // window.open('', document.getElementById('divToSave').toDataURL());
+         // Convert the canvas to blob
+         canvas.toBlob(function(blob){
+          // To download directly on browser default 'downloads' location
+          let link = document.createElement("a");
+          link.download = "rachana.jpeg";
+          link.href = URL.createObjectURL(blob);
+          link.click();
+          
+  
+          // To save manually somewhere in file explorer
+          // window.saveAs(blob, 'image.png');
+  
+      },'image/jpeg');
+  });
+  }
+
 }
