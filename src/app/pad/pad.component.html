@@ -1,0 +1,59 @@
+<div class="rachanaContainer mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" id="rachanaTableId">
+        <ng-container matColumnDef="one">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.one}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="two">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element" (click)="clickCapture($event)">
+                {{element.two}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="three">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.three}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="four">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.four}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="five">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.five}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="six">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.six}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="seven">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.seven}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="eight">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.eight}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="nine">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.nine}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="ten">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.ten}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="eleven">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.eleven}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="twelve">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.twelve}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="thirteen">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.thirteen}}</mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </table>
+</div>

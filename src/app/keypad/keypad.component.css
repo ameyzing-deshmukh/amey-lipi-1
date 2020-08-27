@@ -14,11 +14,12 @@ table {
   mat-header-row{
     display: none;
   }
-  #rachanaTableId mat-row mat-cell:nth-child(1), mat-cell:nth-child(2), mat-cell:nth-child(3), mat-cell:nth-child(5),
+  /* #rachanaTableId mat-row mat-cell:nth-child(1), mat-cell:nth-child(2), mat-cell:nth-child(3), mat-cell:nth-child(5),
   mat-cell:nth-child(6), mat-cell:nth-child(8), mat-cell:nth-child(9),
-  mat-cell:nth-child(11), mat-cell:nth-child(12) {
+  mat-cell:nth-child(11), mat-cell:nth-child(12) { */
     /* background-color: beige; */
-  }
+  /* } */
+  
   #rachanaTableId mat-row mat-cell:nth-child(4), mat-cell:nth-child(7), mat-cell:nth-child(10),
   mat-cell:nth-child(13){
     /* background-color: beige; */
@@ -66,7 +67,8 @@ font-size:10px;
 }
 
 .btn-success:active, .btn-success:focus{
-  border-width: thin !important;
+  outline: none !important;
+  box-shadow: none;
 }
 input{
   background-color: beige;

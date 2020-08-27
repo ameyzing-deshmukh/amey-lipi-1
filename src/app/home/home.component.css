@@ -1,5 +1,10 @@
-.myfooter {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+table {
+    height: 80vh;
+}
+table td{
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    cursor: pointer;
+    font-size: x-large;
 }

@@ -1,0 +1,21 @@
+table.mainTable{
+    height: 75vh;
+    width: 75%;
+}
+table{
+    margin: auto;
+}
+table.mainTable td{
+    text-align: center;
+    color: #343a40 !important;
+    cursor: pointer;
+    font-size: x-large;
+}
+.rachanaBtn{
+    /* width: 28vh; */
+}
+tr.instrumentRow {
+    line-height: 25px;
+    min-height: 25px;
+    height: 25px;
+ }

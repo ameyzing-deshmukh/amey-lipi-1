@@ -1,0 +1,108 @@
+<!-- <app-keypad></app-keypad> -->
+<div class="table-responsive">
+    <table class="table table-bordered mainTable">
+        <tbody>
+            <tr class="instrumentRow">
+                <td class="" routerLink='/anak' style="width:33%;">
+                    आनक
+                </td>
+                <td class="" routerLink='/vanshi' style="width:34%;">
+                    वंशी
+                </td>
+                <td class="" routerLink='/shankha' style="width:33%;">
+                    शंख
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="table-borderless">
+                        <tr>
+                            <td>
+                                <button class='btn btn-secondary btn-block' routerLink='/anakPractice'>भूप</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block' routerLink='/anakPractice'>तिलंग</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block' routerLink='/anakPractice'>तिलक
+                                    कामोद</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class='btn btn-secondary btn-block' routerLink='/anakPractice'>वलचि</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block' routerLink='/anakPractice'>शिवरंजनी</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block' routerLink='/anakPractice'>कैरलि</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="table-borderless">
+                        <tr>
+                            <td>
+                                <button class='btn btn-secondary btn-block' (click)='getRachanaPage("bhoop")' >भूप</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block' (click)='getRachanaPage("tilang")'>तिलंग</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block' (click)='getRachanaPage("tilakkamod")'>तिलक
+                                    कामोद</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class='btn btn-secondary btn-block' (click)='getRachanaPage("valachi")'>वलचि</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block'
+                                (click)='getRachanaPage("shivaranjani")'>शिवरंजनी</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block' (click)='getRachanaPage("kairali")'>कैरलि</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="table-borderless">
+                        <tr>
+                            <td>
+                                <button class='btn btn-secondary btn-block' routerLink='/shankhaPractice'>किरण</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block'
+                                    routerLink='/shankhaPractice'>श्रीराम</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block' routerLink='/shankhaPractice'>उदय</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class='btn btn-secondary btn-block' routerLink='/shankhaPractice'>अजेय</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block'
+                                    routerLink='/shankhaPractice'>प्रतिध्वनि</button>
+                            </td>
+                            <td>
+                                <button class='btn btn-secondary btn-block'
+                                    routerLink='/shankhaPractice'>मेवाड़</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <button class="btn btn-secondary btn-block" routerLink="/rachanaLekhani">पीछे</button>
+</div>
