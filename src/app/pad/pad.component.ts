@@ -153,8 +153,7 @@ export class PadComponent implements OnInit {
   public saveIt(){
     console.log("Hello");
     html2canvas(document.querySelector("#divToSave")).then(canvas => {
-      // document.body.appendChild(canvas);
-      // window.open('', document.getElementById('divToSave').toDataURL());
+      document.body.appendChild(canvas);
          // Convert the canvas to blob
          canvas.toBlob(function(blob){
           // To download directly on browser default 'downloads' location
