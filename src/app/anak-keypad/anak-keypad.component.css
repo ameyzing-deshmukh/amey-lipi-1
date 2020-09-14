@@ -1,0 +1,83 @@
+table {
+    table-layout: fixed !important;
+    width: 100%;
+    }
+    .rachanaContainer{
+      height: 200px;
+    overflow: auto;
+  
+    }
+   table mat-cell {
+      text-align: center;
+      justify-content:center;
+    }
+    mat-header-row{
+      display: none;
+    }
+    /* #rachanaTableId mat-row mat-cell:nth-child(1), mat-cell:nth-child(2), mat-cell:nth-child(3), mat-cell:nth-child(5),
+    mat-cell:nth-child(6), mat-cell:nth-child(8), mat-cell:nth-child(9),
+    mat-cell:nth-child(11), mat-cell:nth-child(12) { */
+      /* background-color: beige; */
+    /* } */
+    
+    #rachanaTableId mat-row mat-cell:nth-child(4), mat-cell:nth-child(7), mat-cell:nth-child(10),
+    mat-cell:nth-child(13){
+      /* background-color: beige; */
+      flex: 0 0 5px;
+  }
+  
+  #rachanaTableId mat-row mat-cell:nth-child(1){
+    text-align: right;
+    justify-content:right;
+    /* background-color: beige; */
+    padding:2px;
+    flex: 0 0 32px;
+    }
+  
+    #rachanaTableId mat-row mat-cell:nth-child(13){
+      text-align: left;
+      justify-content:left;
+      /* background-color: beige; */
+      padding:2px;
+      flex: 0 0 20px;
+      }
+  
+  .rachanaDetailsP1{
+    font-family: KrutiDev;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    height: 20px;
+  }
+  mat-cell{
+  font-size:10px;
+  }
+  
+  .rachanaDetailsP2{
+    font-family: KrutiDev;
+    font-size: small;
+    font-weight: bold;
+  }
+  .btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
+    background-color: white !important;
+    color: black;
+    font-size: large;
+    font-family: KrutiDev;
+    border:none;
+  }
+  
+  .btn-success:active, .btn-success:focus{
+    outline: none !important;
+    box-shadow: none;
+  }
+  input{
+    background-color: beige;
+    border:none;
+  }
+  input:focus{
+    border:none;
+  }
+  .keyPadTableClass tr td{
+    text-align: center;
+    justify-content:center;
+  }

@@ -18,4 +18,11 @@ export class PracticeHomeComponent implements OnInit {
     this.router.navigate(['vanshiPracticeHome', rachanaName]);
   }
 
+  public getShankhaRachanaPage(rachanaName){
+    this.router.navigate(['shankhaPracticeHome', rachanaName]);
+  }
+
+  public getAnakRachanaPage(rachanaName){
+    this.router.navigate(['anakPracticeHome', rachanaName]);
+  }
 }

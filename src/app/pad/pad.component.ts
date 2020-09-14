@@ -75,7 +75,7 @@ export class PadComponent implements OnInit {
   captureIt(it) {
     // console.log("before: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
 
-    if (it === '+') {
+    if (it === ':') {
       // console.log("in if: " + "i: " + this.i + " j: " + this.j + " swarank: " + this.swarank);
       this.j++;
       if (this.j === 12) {

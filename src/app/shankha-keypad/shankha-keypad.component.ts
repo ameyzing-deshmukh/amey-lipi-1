@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PadComponent } from '../pad/pad.component';
 
 @Component({
   selector: 'app-shankha-keypad',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShankhaKeypadComponent implements OnInit {
 
-  constructor() { }
+  constructor(private padComponent: PadComponent) { }
 
   ngOnInit(): void {
+  }
+
+  captureIt(it) {
+    this.padComponent.captureIt(it);
   }
 
 }
