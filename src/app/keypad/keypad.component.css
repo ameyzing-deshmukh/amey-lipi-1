@@ -81,3 +81,10 @@ input:focus{
   text-align: center;
   justify-content:center;
 }
+@font-face{
+  font-family: ghoshVanshiFont;
+  src: url(../fonts/OmeBhatkhandeHindi.ttf);
+}
+.vanshiKeypad button{
+  font-family: ghoshVanshiFont;
+}

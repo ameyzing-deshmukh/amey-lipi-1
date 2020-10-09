@@ -10,6 +10,7 @@ table {
    table mat-cell {
       text-align: center;
       justify-content:center;
+      font-family: ghoshVanshiFont;
     }
     mat-header-row{
       display: none;
@@ -80,4 +81,9 @@ table {
   .keyPadTableClass tr td{
     text-align: center;
     justify-content:center;
+  }
+
+  @font-face{
+    font-family: ghoshVanshiFont;
+    src: url(../fonts/OmeBhatkhandeHindi.ttf);
   }

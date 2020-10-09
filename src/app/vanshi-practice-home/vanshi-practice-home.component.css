@@ -1,0 +1,7 @@
+@font-face{
+    font-family: ghoshVanshiFont;
+    src: url(../fonts/OmeBhatkhandeHindi.ttf);
+}
+.vanshiFontClass{
+    font-family: ghoshVanshiFont;
+}
